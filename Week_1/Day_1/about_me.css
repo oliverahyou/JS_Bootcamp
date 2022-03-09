@@ -1,0 +1,40 @@
+/* h2 {
+  color:red;
+} */
+/* Selection by tag name */
+p {
+  color: orange;
+}
+h3,h4,h5,h6 {
+  color: violet;
+}
+/* Selection by ID */
+#polo {
+  color: green;
+}
+/* Selection by class */
+.wayne {
+  background-color: yellow;
+}
+/* Universal selector */
+* {
+  color:green;
+}
+/* Descendant selector (All) */
+ol li {
+  color: grey;
+}
+/* Child selector (Direct descendant)*/
+ul > li {
+  color: red;
+}
+div > p {
+  color: grey;
+}
+/* Sibling selector */
+img ~ p {
+  color: red;
+}
+img + p {
+  background-color: yellow;
+}

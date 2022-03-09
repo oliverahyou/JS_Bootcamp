@@ -1,0 +1,55 @@
+body {
+  background: url("doctorstrange.jpeg") no-repeat fixed left top;
+  background-size: 1366px 768px;
+  margin: 0;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #000;
+  height: 50px;
+}
+li {
+  float: right;
+}
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+.active{
+  background-color: red;
+  height: 50px;
+}
+li a:hover:not(.active) {
+  background-color: red;
+  height: 50px;
+}
+#strangecircles {
+  position: absolute;
+  top: 5px;
+  left: 10px;
+  height: 40px;
+}
+#doctorstrange {
+  color: white;
+  background-color:rgba(0, 0, 0, 0.9);
+}
+h1 {
+  text-align: center;
+  color: #483D8B;
+}
+p {
+  color: #9400D3;
+}
+footer {
+  display: flex;
+  background-color: black;
+  height: 50px;
+  justify-content: center;
+  align-items: center;
+}
