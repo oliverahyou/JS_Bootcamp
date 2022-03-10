@@ -5,7 +5,7 @@ body {
     display: flex;
     justify-content: space-around;
     background-color: gainsboro;
-    z-: 1;
+    z-index: 1;
 }
 #signin {
     position: relative;
