@@ -1,0 +1,26 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    height: 300px;
+    border: 2px solid red;
+    margin: 5px;
+    padding: 5px;
+    text-align: center;
+    align-items: center;
+}
+.box {
+    background-color: dodgerblue;
+    height: 33%;
+}
+.one {
+    width: 60%;
+}
+.two {
+    width:100%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.three {
+    width: 60%;
+}

@@ -1,0 +1,27 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid coral;
+    width: 400px;
+    height: 100px;
+    padding: 20px 10px;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+.box {
+    width: 90%;
+    height: 50%;
+}
+.logo {
+    background-color: blue;
+    width: 10%;
+}
+.team {
+    background-color: dodgerblue;
+    width: 45%;
+}
+.products {
+    background-color: lightcoral;
+    width: 45%;
+}
