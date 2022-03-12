@@ -52,25 +52,9 @@ li a:hover {
 hr {
     color: lightgrey;
     width: 100%;
-    margin-bottom: -16px;
 }
-.main-box {
-    width: 100vw;
-    height: 75vh;
-    background-color: lightgrey;
+.images {
+    float: left;
+    width: 30%;
+    margin: 20px;
 }
-.signupnow, .shopnow {
-    position: relative;
-    top: 200px;
-    left: 100px;
-    display: inline-block;
-    text-decoration: none;
-    width: 150px;
-    height: 75px;
-    color: white;
-    background-color: black;
-    text-align: center;
-    vertical-align: middle;
-    line-height: 75px;
-}
-
