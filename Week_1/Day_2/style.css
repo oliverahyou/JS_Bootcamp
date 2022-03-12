@@ -4,25 +4,73 @@
 body {
     margin: 0;
 }
+.top-bar {
+    background-color: black;
+    height: 5vh;
+    text-align: center;
+    padding-top: 5px;
+}
+.toptxt {
+    font-size: small;
+    font-weight: bold;
+    display: inline;
+    text-transform: uppercase;
+    color: white;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+.logo {
+    position: relative;
+    top: 15px;
+    left: 25px;
+    height: 50px;
+    margin-bottom: 0;
+}
 ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    background-color: black;
-    height: 8vh;
+    height: 5vh;
 }
 li {
     float: right;
-    border-left: 1px solid white;
 }
 li a {
     display: block;
-    color: white;
+    position: relative;
+    top: -13px;
+    color: black;
     text-decoration: none;
     padding: 15px 20px;
-}
+    font-weight: bold;
+    }
 li a:hover {
     background-color: white;
     color: black;
-    height: 8vh;
+    border-bottom: 2px solid black;
 }
+hr {
+    color: lightgrey;
+    width: 100%;
+    margin-bottom: -16px;
+}
+.main-box {
+    width: 100vw;
+    height: 75vh;
+    background-color: lightgrey;
+}
+.signupnow, .shopnow {
+    position: relative;
+    top: 200px;
+    left: 100px;
+    display: inline-block;
+    text-decoration: none;
+    width: 150px;
+    height: 75px;
+    color: white;
+    background-color: black;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 75px;
+}
+
