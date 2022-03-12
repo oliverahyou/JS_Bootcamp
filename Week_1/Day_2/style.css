@@ -1,0 +1,28 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    height: 8vh;
+}
+li {
+    float: right;
+    border-left: 1px solid white;
+}
+li a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 15px 20px;
+}
+li a:hover {
+    background-color: white;
+    color: black;
+    height: 8vh;
+}
