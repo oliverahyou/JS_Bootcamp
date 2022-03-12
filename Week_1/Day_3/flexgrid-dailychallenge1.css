@@ -1,0 +1,28 @@
+.container {
+    display:grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    height: 60vh;
+}
+.yellowsquare {
+    background-color: yellow;
+    width: 80px;
+    height: 80px;
+    border: 1px solid black;
+
+}
+.side {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 60vh;
+}
+.center {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+.right {
+    display: flex;
+    align-items: flex-end;
+}
