@@ -1,10 +1,13 @@
+* {
+    box-sizing: border-box;
+}
 body {
     font-family: sans-serif;
+    margin: 0;
 }
 .container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    width: 100%;
 }
 .left-col {
     text-align: center;
@@ -25,4 +28,63 @@ body {
 }
 .f-pwd {
     float: right;
+}
+#login {
+    width: 500px;
+    text-transform: uppercase;
+    padding: 10px;
+    background-color: rgb(145, 50, 168);
+    color: white;
+}
+#hrule {
+    position: relative;
+    top: 27px;
+    color: lightgray;
+}
+#connectwith {
+    width: 150px;
+    text-align: center;
+    position: relative;
+    left: 35%;
+    background-color: white;
+}
+.fab {
+    margin: 10px;
+    color: grey;
+}
+#copy {
+    position: relative;
+    top: 30px;
+}
+.right-col {
+    margin: 0;
+    grid-row: 1;
+    grid-column: 2;
+    background-color: rgb(145, 50, 168);
+    color: white;
+}
+.fa-user-plus {
+    position: relative;
+    top: 250px;
+    left: 265px;
+    color: white;
+}
+.right-content {
+    text-align: center;
+    position: relative;
+    top: 250px;
+}
+#register {
+    background-color: rgb(145, 50, 168);
+    color: white;
+    border: 1px solid white;
+    border-radius: 50px;
+    width: 500px;
+    padding: 10px 15px;
+}
+.fa-arrow-right {
+    position: relative;
+    top: 2px;
+    right: 225px;
+
 }
