@@ -1,14 +1,11 @@
 .one {
-    background-color: lightgrey;
+    background-color: white;
 }
 .two {
-    background-color: grey;
+    background-color: rgb(214, 79, 79);
 }
 .three {
-    background-color: rgb(102, 101, 101);
-}
-.four {
-    background-color: rgb(29, 29, 29);;
+    background-color: red;
 }
 .box {
     width: 40px;
@@ -24,7 +21,5 @@
 .container {
     display: grid;
     width: 700px;
-    height: 700px;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 1fr 1fr;
-}
+    height: 400px;
+    grid-template-columns:  repeat(4, 1fr);}
