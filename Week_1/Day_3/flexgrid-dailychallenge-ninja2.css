@@ -1,0 +1,29 @@
+.one {
+    background-color: lightgrey;
+}
+.two {
+    background-color: grey;
+}
+.three {
+    background-color: rgb(102, 101, 101);
+}
+.four {
+    background-color: rgb(29, 29, 29);;
+}
+.box {
+    width: 40px;
+    height: 40px;
+    border: 1px solid black;
+}
+.tile {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5px;
+    padding: 2px;
+}
+.container {
+    display: grid;
+    width: 700px;
+    height: 700px;
+    grid-template-columns: repeat(4, 1fr);
+}
