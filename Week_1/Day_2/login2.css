@@ -1,0 +1,28 @@
+body {
+    font-family: sans-serif;
+}
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+}
+.left-col {
+    text-align: center;
+    padding: 10vw;
+}
+#email {
+    grid-column:1;
+    width: 500px;
+    padding: 10px;;
+}
+#pwd {
+    grid-column: 1;
+    width: 500px;
+    padding: 10px;
+}
+.rememberme {
+    float: left;
+}
+.f-pwd {
+    float: right;
+}
