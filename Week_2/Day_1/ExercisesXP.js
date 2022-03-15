@@ -225,5 +225,7 @@ console.log(watchedSeries);
 delete watchedSeries[1];
 console.log(watchedSeries);
 
-console.log("n");
+// console.log("n");
+console.log(watchedSeries[2].charAt(2));
+
 console.log(watchedSeries);
