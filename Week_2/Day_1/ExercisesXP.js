@@ -180,20 +180,24 @@ typeof(1 != 2)
 // Actual:
 
 99 * "hello"
-// Prediction:
-// Actual:
+// Prediction:99hello
+// Actual:NaN
+console.log(99*"hello");
 
 1 != 1
 // Prediction: False
-// Actual:
+// Actual: False
+console.log(1!=1);
 
 1 == "1"
 // Prediction: True
-// Actual:
+// Actual:True 
+console.log(1=="1");
 
 1 === "1"
 // Prediction: False
-// Actual:
+// Actual: False
+console.log(1==="1");
 
 console.log(Number("three"));
 
