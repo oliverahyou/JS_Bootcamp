@@ -105,7 +105,7 @@ console.log("I eat" + " " + favfood + " " +"at every" + " " + favmeal);
 
 //Exercise 3
 let tmpc = 37;
-let tmpf = tmpc/5*9+32
+let tmpf = ((tmpc/5)*9)+32;
 console.log(tmpc + " " +"is" + " " + tmpf);
 
 // Exercise 4
@@ -222,7 +222,10 @@ console.log(watchedSeries);
 watchedSeries.splice(0, 0, "Sponge Bob Squarepants");
 console.log(watchedSeries);
 
-delete watchedSeries[1];
+// delete watchedSeries[1];
+// console.log(watchedSeries);
+
+delete watchedSeries[watchedSeries.indexOf("black mirror")]
 console.log(watchedSeries);
 
 // console.log("n");
