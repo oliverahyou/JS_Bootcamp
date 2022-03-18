@@ -57,11 +57,14 @@ verb = verb.trim();
 verbLength = verb.length;
 
 // Part 2
-if (verb.length >= 3) {
-    if (!verb.endsWith("ing")){
+if (verb.length >= 3) 
+{
+    if (!verb.endsWith("ing"))
+    {
         verb += "ing";
     }
-    else {
+    else 
+    {
         verb += "ly";
     }
 }
