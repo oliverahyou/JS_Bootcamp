@@ -52,25 +52,19 @@ else
 
 // EXERCISE 3
 // Part 1
-let str = prompt("Please write a verb.");
+let verb = prompt("Please enter a verb.");
+verb = verb.trim();
+verbLength = verb.length;
 
 // Part 2
-let strSplit = str.split("");
-if (strSplit.length >= 3 && !strSplit.includes("i", "n", "g"))
-{
-    let verbing = strSplit.push("ing");
-    console.log(verbing);
+if (verb.length >= 3) {
+    if (!verb.endsWith("ing")){
+        verb += "ing";
+    }
+    else {
+        verb += "ly";
+    }
 }
-else if (strSplit.length >= 3 && strSplit.includes("i", "n", "g"))
-{
-    let verbingly = strSplit.push("l", "y");
-    console.log(verbingly); 
-}
-else if (str.length < 3)
-{
-    console.log(str);
-}
-else
-{
-    alert("Ooops. Something went wrong. Try again with another verb.")
-}
+console.log(verb);
+
+
