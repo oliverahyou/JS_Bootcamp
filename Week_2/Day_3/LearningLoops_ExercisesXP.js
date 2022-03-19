@@ -136,11 +136,12 @@ for (let i in family)
 }
 
 // EXERCISE 6
-let details = {
+let details = 
+{
     my: 'name',
     is: 'Rudolf',
     the: 'raindeer'
-  }
+}
 let sentence = " ";
 for (let i in details)
 {
@@ -152,6 +153,7 @@ for (let i in details)
 let names = ["Jack", "Philip", "Sarah", "Amanda", "Bernard", "Kyle"]
 let namesAlp = names.sort();
 let secretName = " ";
-for (let i = 0; i < namesAlp.length; i++) {
+for (let i = 0; i < namesAlp.length; i++) 
+{
     console.log(secretName += namesAlp[i][0]);
-  }
+}
