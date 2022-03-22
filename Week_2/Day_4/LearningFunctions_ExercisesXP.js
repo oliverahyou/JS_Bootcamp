@@ -198,6 +198,7 @@ function rentalCarCost()
 }
 rentalCarCost();
 
+// Part 4
 function totalVacationCost()
 {
     let carCost = rentalCarCost();
