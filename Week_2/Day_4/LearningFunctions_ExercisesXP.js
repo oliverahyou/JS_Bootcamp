@@ -187,7 +187,7 @@ function rentalCarCost()
     if (num_days <=10)
     {
         totalAmount = num_days * 40;
-        console.log(cost);
+        console.log(totalAmount);
     }
     else if (num_days > 10)
     {
@@ -207,52 +207,3 @@ function totalVacationCost()
     console.log("The car costs $" + carCost + ", the hotel costs $" + hotel + ", the plane ticket costs $" + ticket);
 }
 totalVacationCost();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// }
-// // Part 3
-// function rentalCarCost()
-// {
-//     let num_days = null;
-//     do 
-//     {
-//         num_days = prompt("Message: Please enter the number of days");
-//         num_days = Number(num_days);
-//     }
-//     while (isNaN(num_days)|| num_days === 0)
-//     let total_amount = num_days * 40;
-//     if (num_days > 10)
-//     {
-//     total_amount = total_amount * 0.95
-//     }
-//     return total_amount;
-// }
-// console.log(rentalCarCost());
-
-// // Part 4
-// function totalVacationCost()
-// {
-//     let carCost = rentalCarCost();
-//     let ticket = planeRideCost();
-//     let hotel = hotelCost();
-    
-//     console.log("The car costs: $" + carCost + ", the hotel costs: $" + hotel + " and the plane ticket costs: $" + ticket)
-
-//     return (carCost + ticket + hotel);
-// }
-// console.log(totalVacationCost());
