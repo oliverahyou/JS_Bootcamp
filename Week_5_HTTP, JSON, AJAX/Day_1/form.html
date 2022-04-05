@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML and Forms</title>
+    <style>
+        #contact {
+            display: flex;
+            flex-direction: column;
+            width: 300px;
+            height: 200px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>HTTP and Forms</h1>
+    <form  name="numbers">
+        <input name="one" value="1">
+        <input name="two" value="2">
+    </form>
+    <br>
+    <form name="user">
+        <fieldset name="userFields">
+            <input type="text" name="login">
+            <input type="password" name="password">
+        </fieldset>
+    </form>
+    <br>
+    <form name="controls">
+        <input type="checkbox" name="stresslevel" checked="true">
+        <label for="stresslevel">Are you ready?</label>
+
+        <textarea name="longtext" cols="50" rows="5" placeholder="Please enter your message here"></textarea>
+    </form>
+    <label for="select">What is your stress level today?</label>
+    <select id="select">
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5" selected="true">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+    </select>
+    <form id="contact" onsubmit="submit_func">
+        <input type="text" name="name" placeholder="Enter your name">
+        <input type="email" name="email" placeholder="Enter your email">
+        <textarea name="message" placeholder="Type your message" cols="30" rows="10"></textarea>
+        <button type="submit">Submit</button>
+    </form>
+    <br>
+    <form action="http://www.google.com/search" method="get">
+        <input type="text" name="q">
+        <input type="submit" value="Search Google!">
+    </form>
+    <script src="form.js" charset="utf-8"></script>
+</body>
+</html>
