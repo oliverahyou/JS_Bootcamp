@@ -39,7 +39,7 @@ const gameInfo = [
     //3 Get total score
     score += player.score;
 
-})
+});
 
 console.log(usernames);
 console.log(winners);
