@@ -8,3 +8,4 @@ let experiencePoints = winBattle ? 10: 1;
 
 // Part 4
 console.log(experiencePoints);
+    
