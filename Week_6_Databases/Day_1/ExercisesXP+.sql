@@ -1,6 +1,6 @@
 -- Insert student entries
- set datestyle = 'ISO, DMY';
- show datestyle;
+--  set datestyle = 'ISO, DMY';
+--  show datestyle;
 -- 1
 -- INSERT INTO students (first_name, last_name, birth_date)
 -- VALUES('Marc', 'Benichou', '02/11/1998'), ('Yoan', 'Cohen', '03/12/2010'), 
