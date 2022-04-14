@@ -49,6 +49,7 @@
 -- LEFT JOIN inventory 
 -- ON film.film_id = inventory.film_id
 -- WHERE film.film_id NOT IN (SELECT inventory.film_id FROM inventory)
+--***WHERE inventory.film_id = NULL***
 -- ORDER BY film.film_id;
 
 -- 14
