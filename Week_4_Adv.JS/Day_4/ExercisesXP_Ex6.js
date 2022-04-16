@@ -34,3 +34,15 @@ class Mamal extends Animal {
         return (`${this.name}, ${this.type}, ${this.color} and ${sound}`);
     }
 }
+
+// 5
+class Cow extends Mamal {
+    constructor(name, type, color){
+        super(name);
+        this.type = type;
+        this.color = color;
+    }
+}
+let newCow = new Cow ("Potato", "Angus", "black");
+newCow.sound("Moo");
+console.log(newCow.sound("Moo"));
