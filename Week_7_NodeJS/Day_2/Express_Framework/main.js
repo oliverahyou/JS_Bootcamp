@@ -20,12 +20,15 @@ app.get("/about", (req, res) => { res.send("This is me!")})
 
 // Parameter
 app.get("/tutorial/:notion", (req, res) => {
-    console.log("req.params: " req.params)
+    console.log("req.params: ", req.params)
     res.send(`Tutorial about ${req.params.notion}!`)
 })
 app.get("products/:product", (req, res =>{
-    console.log("Product requested:", req.params.product)
-    res.send(`Product requested ${req.params.product}`)
+   console.log("Product requested:", req.params.product);
+    //Get product from database using the product ID and send information
+    res.send(`Product requested ${req.params.product}`) 
 }))
-
+app.get("/products", (req, res) => {
+    console.log(req.query);
+})
 app.listen(5000);
