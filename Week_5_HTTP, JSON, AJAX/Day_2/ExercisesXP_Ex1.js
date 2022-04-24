@@ -69,7 +69,7 @@ function display_data(data){
         iframe.width = "240px";
         title.innerText = gif.title;
         title.style.width = "240px"
-// 
+
         div.appendChild(title);
         div.appendChild(iframe);
         body.appendChild(div);

@@ -1,60 +1,67 @@
-let form = document.forms.gif_search;
-console.log(form);
+let gifs = document.getElementById("gifs");
+let searchForm = document.forms[0];
+let searchButton = document.getElementById("searchButton");
+let deleteAll = document.getElementById("deleteAll");
 
-let search = document.forms.gif_search.search;
-console.log(search);
+deleteAll.addEventListener("click", function(){
+    let arr = gifs.children;
+    for (let index of arr){
+        console.log(index);
+        gifs.removeChild(gifs.lastElementChild);
+    }
+})
 
-form.addEventListener("submit", submitForm);
-function submitForm(event){
+searchForm.addEventListener("click", (event) =>{
     event.preventDefault();
-    console.log("Search requested");
-    
-    make_gif_search()
+})
+
+searchButton.addEventListener("click", function() {
+    searchResult = searchForm.search.value;
+    getData(searchResult);
+})
+
+let searchResult;
+function getGif(){
+    searchResult = searchForm.search.value;
+    getData(searchResult);
 }
-function make_gif_search(){
+
+function getData(searchResult){
     let xhr = new XMLHttpRequest();
-    let url = `https://api.giphy.com/v1/gifs/search?q=${search}&rating=g&api_key=hpvZycW22qCjn5cRM1xtWB8NKq4dQ2My`
+    xhr.open("GET", `https://api.giphy.com/v1/gifs/search?q=${searchResult}&rating=g&api_key=hpvZycW22qCjn5cRM1xtWB8NKq4dQ2My`)
+    xhr.responseType = "json";
+    xhr.send();
+
+    xhr.onload = () => {
+        if (xhr.status === 200){
+            console.log(xhr.response);
+            let data = xhr.response.data[0];
+            console.log(data);
+            displayData(data);
+        }
+        else {
+            console.log(`Error: ${xhr.status} - ${xhr.statusText}`);
+        }
+    }
+
 }
+function displayData(data){
+    let div = document.createElement("div");
+    let title = document.createElement("h3");
+    let iframe = document.createElement("iframe");
+    let deleteButton = document.createElement("button");
+    deleteButton.innerText = "Delete";
 
+    iframe.setAttribute("src", "https://giphy.com/embed/" + data.id);
+    iframe.width = "240px";
+    title.innerText = `Category: ${searchResult}`;
 
-
-
-
-let xhr = new XMLHttpRequest();
-let url = `https://api.giphy.com/v1/gifs/search?q=hilarious&rating=g&api_key=hpvZycW22qCjn5cRM1xtWB8NKq4dQ2My`
-xhr.open("GET", url, true);
-xhr.responseType = "json";
-xhr.send();
-let data= []
-xhr.onload = function(){
-    if (xhr.status === 200){
-        console.log(xhr.response);
-        data = xhr.response.data;
-        console.log(data);
-        display_data(data);
-    }
-    else {
-        console.log(`Error ${xhr.status}: ${xhr.statusText}`);
-    }
-}
-xhr.onprogress = function(event){
-    if (event.lengthComputable){
-        alert(`Received ${event.loaded} of ${event.total}`)
-    }
-}
-let body = document.body;
-function display_data(data){
-    for (let gif of data){
-        let div = document.createElement("div");
-        let title = document.createElement("h3");
-        let iframe = document.createElement("iframe");
-        iframe.setAttribute("src", `https://giphy.com/embed/${gif.id}`);
-        iframe.width = "240px";
-        title.innerText = gif.title;
-        title.style.width = "240px"
-
-        div.appendChild(title);
-        div.appendChild(iframe);
-        body.appendChild(div);
-    }
+    // Delete button
+    deleteButton.addEventListener("click", function () {
+        gifs.removeChild(div);
+    })
+    div.appendChild(title);
+    div.appendChild(iframe);
+    div.appendChild(deleteButton);
+    gifs.appendChild(div);
 }
