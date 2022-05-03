@@ -5,7 +5,7 @@
 // });
 
 Promise.all([
-    new Promise(resolve => setTimeout(() => resolve(3), 1000)),
-    new Promise(resolve => setTimeout(() => resolve(42), 2000)),
+    new Promise(resolve => setTimeout(() => resolve(3), 3000)),
+    new Promise(resolve => setTimeout(() => resolve(42), 3000)),
     new Promise(resolve => setTimeout(()=> resolve("foo"), 3000))
-]).then(console.log("Promise resolved!"));
+]).then(alert);

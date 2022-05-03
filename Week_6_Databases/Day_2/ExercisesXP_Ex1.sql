@@ -10,7 +10,7 @@
 --  ORDER BY firstname ASC LIMIT 3;
 
 -- CREATE TABLE purchases(
--- 	id SERIAL,
+-- 	id SERIAL PRIMARY KEY,
 -- 	customer_id INTEGER,
 -- 	item_id INTEGER,
 -- 	quantity_purchased INTEGER,

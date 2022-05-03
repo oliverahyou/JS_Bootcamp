@@ -1,23 +1,32 @@
--- CREATE TABLE FirstTab (
---      id integer, 
---      name VARCHAR(10)
--- );
--- Creates a table with 2 columns: id and name.
--- INSERT INTO FirstTab VALUES
--- (5,'Pawan'),
--- (6,'Sharlee'),
--- (7,'Krish'),
--- (NULL,'Avtaar');
--- Inserts data into table, Avtaar has no id.
--- SELECT * FROM FirstTab;
+-- 1
+-- SELECT COUNT(*) 
+--     FROM firsttab AS ft WHERE ft.id NOT IN ( SELECT id FROM SecondTab WHERE id IS NULL )
 
-CREATE TABLE SecondTab (
-     id integer 
- )
--- Creates second table with only one column: id.
- INSERT INTO SecondTab VALUES
- (5),
- (NULL);
+-- 2
+--     SELECT COUNT(*) 
+--     FROM FirstTab AS ft WHERE ft.id NOT IN ( SELECT id FROM SecondTab WHERE id = 5 )
 
---Inserts two row values: 5 and NULL.
- SELECT * FROM SecondTab
+-- 3
+--  SELECT COUNT(*) 
+--     FROM FirstTab AS ft WHERE ft.id NOT IN ( SELECT id FROM SecondTab )
+
+-- 4
+--  SELECT COUNT(*) 
+--     FROM FirstTab AS ft WHERE ft.id NOT IN ( SELECT id FROM SecondTab WHERE id IS NOT NULL )
+
+-- SELECT * FROM firsttab;
+-- SELECT * FROM secondtab;
+
+-- 1
+-- Prediction: Selects first three persons(Pawan, Sharlee, Krish) and excludes Avtaar.
+-- Outcome: 0
+
+-- 2
+--  Outcome: 2
+
+-- 3
+-- Outcome: 0
+
+-- 4
+-- Outcome: 2
+
