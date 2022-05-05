@@ -1,41 +1,27 @@
 const reducer = (state, action) => {
-    //list of days
-    let week = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+    let new_value;
+    
+    console.log(action, value);
 
-    //action.day is the payload from the actions folder
-    let currentDay = week.indexOf(action.day)
-
-    //set this variable for later
-    let chosenDay;
 
     switch (action.type) {
 
         //if we want to get the next day
-        case "FORWARD_DAY":
+        case "ADD":
             //some logic about the array above
-            if (currentDay == week.length - 1) {
-                chosenDay = week[0]
-            } else {
-                chosenDay = week[currentDay + 1]
-            }
-
+            new_value = Number(action.number) + 1;
             return {
                 ...state, //copying the original state
-                weekday: chosenDay, //update the weekday key from the state
+                value: new_value  
             }
 
         //if we want to get the previous day
-        case "BACKWARD_DAY":
+        case "SUBSTRACT":
             //some logic about the array above
-            if (currentDay == 0) {
-                chosenDay = week[week.length - 1]
-            } else {
-                chosenDay = week[currentDay - 1]
-            }
-
+            new_value = Number (action.number) - 1;
             return {
                 ...state, //copying the original state
-                weekday: chosenDay, //update weekday key from the state
+                value: new_value, //update value key from the state
             }
         default:
             return state; //Otherwise, return the existing state unchanged

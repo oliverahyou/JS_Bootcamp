@@ -1,21 +1,21 @@
-//to move on to the next day
-const forward = weekday => {
+// to increment value
+const add = value => {
     return {
-        type: "FORWARD_DAY",
-        day: weekday
+        type: "ADD",
+        number: value
     }
 }
 
-//to go back to the previous day
-const backward = weekday => {
+// to decrement value
+const substract = value => {
     return {
-        type: "BACKWARD_DAY",
-        day: weekday
+        type: "SUBSTRACT",
+        number: value
     }
 }
 
 //we export the two functions
 export {
-    forward,
-    backward,
+    add,
+    substract,
 }
