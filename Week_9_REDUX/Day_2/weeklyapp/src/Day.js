@@ -1,37 +1,27 @@
 import React from "react";
 import './Day.css';
-import { store } from "./store";
-import { forward, backward } from "./actions";
+import { connect } from 'react-redux';
 
-const Day = ({ weekday }) => {
 
-    const handleSubmit = event => {
-        event.preventDefault();
-        //get button dataset
-        const buttonType = event.target.dataset.button
-        //get H1 dataset
-        const day = event.target.parentElement.firstElementChild.dataset.day
+// use props from the mapStateToProps function
+const Day = (props) => {
 
-        switch (buttonType) {
-            case "next":
-                store.dispatch(forward(day));
-                break;
-            case "back":
-                store.dispatch(backward(day));
-                break;
-            default:
-                console.log("wrong button")
-        }
-    }
+    //here should be the handleSubmit function not represented in this example
 
 
     return (
         <>
-            <h1 data-day={weekday}>Today is <span>{weekday}</span></h1>
-            <button type="submit" onClick={handleSubmit} data-button="next">Next Day</button>
-            <button type="submit" onClick={handleSubmit} data-button="back">Previous Day</button>
+            //new
+            <h1 data-day={props.weekday}>Today is <span>{props.weekday}</span></h1>
+            //here should be the buttons not represented in this example
         </>
     );
 };
 
-export default Day;
+//new : extract weekday from the state
+const mapStateToProps = (state) => {
+    return { weekday: state.weekday };
+};
+
+//new
+export default connect(mapStateToProps)(Day);

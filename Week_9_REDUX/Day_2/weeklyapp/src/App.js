@@ -1,8 +1,7 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import Day from './Day';
-
-//import the store from store/index.js file
-import { store } from "./store";
+import './Day.css';
 
 class App extends React.Component {
   constructor() {
@@ -12,11 +11,15 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        {/* //we call the <Day> Component */}
-        <Day weekday={store.getState().weekday} />
+        //here
+        <Day/>
       </div>
     )
   }
 }
 
-export default App;
+const mapStateToProps = (state) => {
+  return { weekday: state.weekday }
+};
+
+export default connect(mapStateToProps)(App);
