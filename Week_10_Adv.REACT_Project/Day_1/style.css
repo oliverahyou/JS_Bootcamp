@@ -1,0 +1,40 @@
+.navbar-brand {
+    float: left;
+    margin-right: auto;
+    width: 100%;
+}
+.nav-item {
+    display: flex;
+    justify-content: center;
+    margin-right: 50px;
+}
+.searchBar {
+    display: flex;
+    justify-content: center;
+}
+#search-bar {
+    width: 25%;
+    margin-right: 1%;
+}
+#submitButton {
+    padding: 5px 20px;
+}
+.container-fluid {
+    display: flex;
+    align-items: center;
+}
+.bigBox {
+    display: flex;
+    border: 1px solid black;
+    width: 100vw;
+    height: 60vh;
+}
+.image {
+    margin: 20px;
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+}
+.cityName {
+    margin-top: 25px;
+}
