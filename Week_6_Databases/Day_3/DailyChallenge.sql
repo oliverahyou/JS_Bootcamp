@@ -65,10 +65,30 @@
 -- VALUES ('John', 12), ('Lera', 11), ('Patrick', 10), ('Bob', 14)
 
 -- 5
-CREATE TABLE Library(
-	book_fk_id SMALLINT ON DELETE CASCADE ON UPDATE CASCADE,
-	student_fk_id SMALLINT ON DELETE CASCADE ON UPDATE CASCADE,
-	borrowed_date DATE,
-	FOREIGN KEY(book_fk_id) REFERENCES Book(book_id),
-	FOREIGN KEY(student_fk_id) REFERENCES Student(student_id)
-);
+-- 	CREATE TABLE Library(
+-- 	book_fk_id SMALLINT,
+-- 	student_fk_id SMALLINT,
+-- 	borrowed_date DATE,
+-- 	FOREIGN KEY(book_fk_id) REFERENCES Book(book_id) ON DELETE CASCADE ON UPDATE CASCADE,
+-- 	FOREIGN KEY(student_fk_id) REFERENCES Student(student_id) ON DELETE CASCADE ON UPDATE CASCADE
+-- );
+
+-- Book
+-- Alice In Wonderland 1
+-- Harry Potter 2
+-- To kill a mockingbird 3
+
+-- Student
+-- John 1
+-- Lera 2
+-- Patrick 3
+-- Bob 4
+
+-- 6
+-- INSERT INTO Library (book_fk_id, student_fk_id, borrowed_date)
+-- VALUES(1, 1, '15/02/2022'), (3, 4, '03/03/2021'), (1, 2, '23/05/2021'), (2, 4, '12/08/2021')
+
+-- 7
+SELECT * 
+FROM Student, Book
+WHERE 
