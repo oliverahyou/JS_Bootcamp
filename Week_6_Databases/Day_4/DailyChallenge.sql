@@ -1,0 +1,21 @@
+-- 1
+-- CREATE TABLE orders (
+-- 	order_id SERIAL,
+-- 	item_id INTEGER NOT NULL,
+-- 	item_price INTEGER NOT NULL,
+-- 	quantity INTEGER NOT NULL,
+-- 	total_price INTEGER NOT NULL,
+-- 	PRIMARY KEY(order_id)
+-- )
+
+-- CREATE TABLE items (
+-- 	item_id SERIAL,
+-- 	item_name VARCHAR(100) NOT NULL,
+-- 	item_description TEXT  NOT NULL,
+-- 	item_price INTEGER NOT NULL,
+-- 	order_id SERIAL,
+-- 	PRIMARY KEY (item_id),
+-- 	FOREIGN KEY (order_id) REFERENCES orders (order_id)
+-- )
+
+-- 3

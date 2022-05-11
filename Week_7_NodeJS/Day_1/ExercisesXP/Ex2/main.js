@@ -1,0 +1,1 @@
+console.log("Hi. Thanks for running me with npm start.")
