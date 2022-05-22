@@ -15,11 +15,7 @@ app.get("/aboutMe/:hobby", (req, res) => {
     }
 });
 app.get("/pic", (req, res) => {
-    let body = document.body;
-    let img = document.createElement("image");
-    img.setAttribute("src", "potato.jpeg");
-    body.appendChild(img);
-    res.send(img);
+    
 });
 app.listen(3000, () => {
     console.log("App listening on port 3000...");
