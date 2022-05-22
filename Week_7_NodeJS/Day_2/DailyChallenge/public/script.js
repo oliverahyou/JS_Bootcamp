@@ -16,5 +16,5 @@ let formEmail = document.getElementById("email").value;
 let formMessage = document.getElementById("message").value;
 
 function displayData(){
-    console.log(`${formEmail} " sent you a message: " + ${formMessage}`);
+    console.log(`${formEmail} " sent you a message: " ${formMessage}`);
 }
