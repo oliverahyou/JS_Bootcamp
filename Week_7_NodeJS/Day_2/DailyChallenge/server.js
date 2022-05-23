@@ -1,9 +1,9 @@
 const express = require("express");
 const app = express();
-const cors = require("cors");
 
 app.use(express.static("public"));
 
+const cors = require("cors");
 app.use(cors());
 
 app.get("/aboutMe/:hobby", (req, res) => {
