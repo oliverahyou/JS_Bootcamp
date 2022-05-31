@@ -7,13 +7,12 @@
     <title>Daily Challenge</title>
 </head>
 <body>
-    <div>
-        <form name="Potato" action="/formData" method="post">
-            <input type="email" name="email" id="email" placeholder="Email"><br>
-            <textarea name="message" id="message" cols="28" rows="10" placeholder="Please enter your message here..."></textarea><br>
-            <button onclick="displayData()">Send</button>
-        </form>
-    </div>
-    <script src="script.js"></script>
+    <form name="potato" id="potato" action="/formData" method="post">
+        <input type="email" name="email" id="email" placeholder="Email"><br>
+        <textarea name="message" id="message" cols="28" rows="10" placeholder="Please enter your message here..."></textarea><br>
+        <input type="submit" onclick="displayData()" value="Submit">
+    </form>
+    
+    <script src="server.js"></script>
 </body>
 </html>
