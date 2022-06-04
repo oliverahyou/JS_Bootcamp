@@ -71,7 +71,7 @@ for (let i=0; i<10; i++){
         Lastname: lastName,
         StreetName: streetName,
         Country: country
-    })
+    });
 };
 console.log(users);
 // const faker = require("faker");
