@@ -27,7 +27,7 @@ app.get("/form", (req, res) => {
     res.sendFile("form.html", {root: path.join(__dirname, "./public")});
 });
 app.post("/formData", (req, res) => {
-    res.send(req.body);
+    res.send(`${req.body.email} sent you a message: ${req.body.message}`);
     console.log(req.body);
 })
 app.listen(port, () => {
