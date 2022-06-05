@@ -2,24 +2,25 @@ const exp = require("express");
 const app = exp();
 const path = require("path");
 const port = 3000;
+const bp = require("body-parser");
 
-
+app.use(bp());
 
 let shopList = [
 {
-name: "potatoes",
+itemName: "potatoes",
 price: 150
 },
 {
-name: "apples",
+itemName: "apples",
 price: 200
 },
 {
-name: "oranges",
+itemName: "oranges",
 price: 300
 },
 {
-name: "yoghurt",
+itemName: "yoghurt",
 price: 450
 }
 ];
@@ -44,7 +45,9 @@ app.get("/", (req, res) => {
 })
 
 app.post("/item", (req, res) => {
-    
+    shopList.push(req.body);
+    res.send(shopList);
+    console.log(req.body);
 });
 
 app.listen(port);
