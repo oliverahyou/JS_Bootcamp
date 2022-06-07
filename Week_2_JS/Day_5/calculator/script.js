@@ -16,7 +16,11 @@ const reset = () => {
     let a = document.getElementById("display").value = " ";
     return a;
 };
+
 const clear = () => {
     let a = document.getElementById("display").value;
-    document.getElementById("display").value = a.substring(0, a.length - 1);
+    let arr = a.split("");
+    newArr = arr.length - 1;
+    let str = newArr.join("");
+    a = str;
 };
