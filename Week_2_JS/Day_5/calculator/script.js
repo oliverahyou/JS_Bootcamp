@@ -17,10 +17,18 @@ const reset = () => {
     return a;
 };
 
+// let a = document.getElementById("display").value;
+//     let arr = a.split("");
+//     newArr = arr.length - 1;
+//     let str = newArr.join("");
+//     a = str; 
+
+// let a = document.getElementById("display").value;
+//     let arr = a.split("");
+//     let newArr = arr.pop();
+//     return newArr;
+    
 const clear = () => {
-    let a = document.getElementById("display").value;
-    let arr = a.split("");
-    newArr = arr.length - 1;
-    let str = newArr.join("");
-    a = str;
+
+    
 };
