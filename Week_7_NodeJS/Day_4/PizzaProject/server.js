@@ -5,7 +5,7 @@ const port = 3000;
 app.use(exp.static('public'));
 
 app.set("view engine", "ejs");
-
+document.getElementsByTagName
 let menu = [
     {
         name: "Margarita",
