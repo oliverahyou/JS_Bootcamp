@@ -12,9 +12,8 @@ fs.readFile("./text.txt", "utf-8", (err, data) => {
                 pos += 1;
             } else {
                 pos -= 1;
-            }; 
+            };
         });
-        console.log(`Total teps: ${pos}`);
-        
+        console.log(`Total steps: ${pos}`);
     };
 });
