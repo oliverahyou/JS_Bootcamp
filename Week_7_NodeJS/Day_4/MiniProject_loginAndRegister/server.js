@@ -1,4 +1,3 @@
-const port = 3000;
 const exp = require("express");
 const app = exp();
 const path = require("path");
@@ -38,4 +37,4 @@ app.post("/register", (req, res) => {
     })
     // res.send(req.body);
 });
-app.listen(port);
+app.listen(3000);
