@@ -5,7 +5,7 @@ const Planets = (props) => {
   return (
     <div> 
       {
-        planets.map((user, i) => {
+        planets.map((value, i) => {
           return <li className="list-group-item">{planets[i]}</li>
         })
       }
