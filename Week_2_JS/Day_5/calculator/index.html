@@ -16,9 +16,9 @@
   </head>
   <body>
     <div class="calculator">
-        <div class="row">
-                <input type="text" name="display" id="display">
-        </div>
+        
+        <input type="text" name="display" id="display" placeholder="0">
+        
         <div class="row">
             <div><input type="button" class="btn num" name="button" onclick="number(0);" value="0"></div>
             <div><input type="button" class="btn num" name="button" onclick="number(1);" value="1"></div>
@@ -41,8 +41,8 @@
             <div><input type="button" class="btn op" name="button" onclick="equal();" value="="></div>    
         </div>
         <div class="row">
-            <div><button type="button" class="reset" name="button" onclick="reset();">Reset</button></div>
-            <div><button type="button" class="clear" name="button" onclick="clear();">Clear</button></div>
+            <div><button type="button" class="reset" name="button" onclick="reset()">Reset</button></div>
+            <div><button type="button" class="clear" name="button" onclick="dlt()">Delete</button></div>
         </div>
     </div>
     <script src="./script.js" charset="utf-8"></script>

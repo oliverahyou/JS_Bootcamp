@@ -1,34 +1,23 @@
+const input = document.getElementById("display");
+
 const number = (num) => {
-    let a = document.getElementById("display").value += num;
+    let a = input.value += num;
     return a;
 };
 const operator = (operator) => {
-    let a = document.getElementById("display").value += operator;
+    let a = input.value += operator;
     return a;
 };
 const equal = () => {
-    let a = document.getElementById("display").value;
+    let a = input.value;
     let b = eval(a);
     document.getElementById("display").value = b;
     return b;   
 };
 const reset = () => {
-    let a = document.getElementById("display").value = " ";
+    let a = input.value = " ";
     return a;
 };
-
-// let a = document.getElementById("display").value;
-//     let arr = a.split("");
-//     newArr = arr.length - 1;
-//     let str = newArr.join("");
-//     a = str; 
-
-// let a = document.getElementById("display").value;
-//     let arr = a.split("");
-//     let newArr = arr.pop();
-//     return newArr;
-    
-const clear = () => {
-
-    
+function dlt() {
+    input.value = input.value.slice(0, -1);
 };
