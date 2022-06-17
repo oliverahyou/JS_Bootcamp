@@ -1,16 +1,27 @@
 import React from "react";
+import "./Forms.css";
 
 class Forms extends React.Component {
-    constructor(){
+    constructor () {
         super();
+        this.state = {
+            username: ""
+        }
     }
-    render(){
-        return(
-            <div>
-                <h1>Hello</h1>
+    onInputChange(event){
+        this.setState({
+            username: event.target.value
+        })
+    }
+    render() {
+        return (
+            <div className="form">
+                <h1>Hello {this.state.username}</h1>
                 <p>Enter your name:</p>
-                <input type="text" name="name"></input>
+                <input type="text" name="name" onChange={(event) => {this.onInputChange(event)}}></input>
             </div>
+            
+
         )
     }
 }
