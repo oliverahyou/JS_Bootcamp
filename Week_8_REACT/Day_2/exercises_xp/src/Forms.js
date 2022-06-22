@@ -20,8 +20,6 @@ class Forms extends React.Component {
                 <p>Enter your name:</p>
                 <input type="text" name="name" onChange={(event) => {this.onInputChange(event)}}></input>
             </div>
-            
-
         )
     }
 }
