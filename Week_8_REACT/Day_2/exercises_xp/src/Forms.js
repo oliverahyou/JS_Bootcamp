@@ -16,9 +16,11 @@ class Forms extends React.Component {
     render() {
         return (
             <div className="form">
+                <form className="potato">
                 <h1>Hello {this.state.username}</h1>
                 <p>Enter your name:</p>
                 <input type="text" name="name" onChange={(event) => {this.onInputChange(event)}}></input>
+                </form>
             </div>
         )
     }
