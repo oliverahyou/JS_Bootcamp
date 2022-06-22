@@ -14,12 +14,17 @@ class Forms extends React.Component {
         })
     }
     render() {
-        return (
+        let header;
+        if (this.state.username) {
+            header = <h1>Hello {this.state.username}</h1>
+        }
+        return (    
             <div className="form">
                 <form className="potato">
-                <h1>Hello {this.state.username}</h1>
+                <div>{header}</div>
                 <p>Enter your name:</p>
                 <input type="text" name="name" onChange={(event) => {this.onInputChange(event)}}></input>
+                <input type="submit" value="Submit"></input>
                 </form>
             </div>
         )
