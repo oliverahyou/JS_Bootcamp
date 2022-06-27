@@ -13,7 +13,11 @@ class Forms extends React.Component {
             author: "",
             genre: "",
             year: "",
-            successmessage: ""
+            successmessage: "",
+            firstName: "",
+            lastName: "",
+            phoneNumber: "",
+            email: ""
         }
         this.mySubmitHandler = this.mySubmitHandler.bind(this);
         this.onInputChange = this.onInputChange.bind(this);
@@ -38,6 +42,9 @@ class Forms extends React.Component {
         this.setState({successmessage: "Data sent!"})
         console.log(`{Title: ${this.state.title}, Author: ${this.state.author}, Genre: ${this.state.genre}, Year: ${this.state.year}.}`)
         event.preventDefault();
+    }
+    formThreeSubmit (event) {
+        
     }
     render () {
         let header;
@@ -76,13 +83,13 @@ class Forms extends React.Component {
                     <input type="submit" value="Submit"></input>
                 </form>
 
-                <form className="formThree">
+                <form className="formThree" onSubmit={this.formThreeSubmit}>
                     <h1 className="welcome">Welcome!</h1>
                     <p>Please provide your information below.</p>
-                    <input type="text" placeholder="First Name"></input><br/>
-                    <input type="text" placeholder="Last Name"></input><br/>
-                    <input type="tel" placeholder="Phone Number"></input><br/>
-                    <input type="email" placeholder="Email Address"></input><br/>
+                    <input type="text" placeholder="First Name" onChange={(event) => {this.setState({firstName: event.target.value})}}></input><br/>
+                    <input type="text" placeholder="Last Name" onChange={(event) => {this.setState({lastName: event.target.value})}}></input><br/>
+                    <input type="tel" placeholder="Phone Number" onChange={(event) => {this.setState({phoneNumber: event.target.value})}}></input><br/>
+                    <input type="email" placeholder="Email Address" onChange={(event) => {this.setState({email: event.target.value})}}></input><br/>
                     <input type="submit" value="Submit"></input>
                 </form>
             </div>
