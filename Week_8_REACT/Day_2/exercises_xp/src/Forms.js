@@ -23,6 +23,7 @@ class Forms extends React.Component {
         this.onInputChange = this.onInputChange.bind(this);
         this.onAgeChange = this.onAgeChange.bind(this);
         this.bookSubmit = this.bookSubmit.bind(this);
+        this.formThreeSubmit = this.formThreeSubmit.bind(this);
     }
     onInputChange (event) {
         this.setState({username: event.target.value});
@@ -44,13 +45,14 @@ class Forms extends React.Component {
         event.preventDefault();
     }
     formThreeSubmit (event) {
-        
+        if ()
     }
     render () {
         let header;
         if (this.state.username && this.state.age) {
             header = <h1>Hello {this.state.username} {this.state.age}</h1>
         }
+        
         return (    
             <div className="forms">
                 <form className="potato" onSubmit={this.mySubmitHandler}>
