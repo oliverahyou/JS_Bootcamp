@@ -1,5 +1,6 @@
 import React from "react";
 import "./Forms.css";
+import FormBg from "./FormBg";
 
 class Forms extends React.Component {
     constructor () {
@@ -45,7 +46,7 @@ class Forms extends React.Component {
         event.preventDefault();
     }
     formThreeSubmit (event) {
-        if ()
+        let submitted = true;
     }
     render () {
         let header;
@@ -86,6 +87,7 @@ class Forms extends React.Component {
                 </form>
 
                 <form className="formThree" onSubmit={this.formThreeSubmit}>
+                    <div className="beforeSubmit">
                     <h1 className="welcome">Welcome!</h1>
                     <p>Please provide your information below.</p>
                     <input type="text" placeholder="First Name" onChange={(event) => {this.setState({firstName: event.target.value})}}></input><br/>
@@ -93,6 +95,7 @@ class Forms extends React.Component {
                     <input type="tel" placeholder="Phone Number" onChange={(event) => {this.setState({phoneNumber: event.target.value})}}></input><br/>
                     <input type="email" placeholder="Email Address" onChange={(event) => {this.setState({email: event.target.value})}}></input><br/>
                     <input type="submit" value="Submit"></input>
+                    </div>
                 </form>
             </div>
         )
