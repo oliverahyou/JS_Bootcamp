@@ -1,6 +1,7 @@
 import React from "react";
 import "./Forms.css";
-import FormBg from "./FormBg";
+import * as ReactDOM from "react-dom";
+
 
 class Forms extends React.Component {
     constructor () {
@@ -25,6 +26,7 @@ class Forms extends React.Component {
         this.onAgeChange = this.onAgeChange.bind(this);
         this.bookSubmit = this.bookSubmit.bind(this);
         this.formThreeSubmit = this.formThreeSubmit.bind(this);
+        this.reset = this.reset.bind(this);
     }
     onInputChange (event) {
         this.setState({username: event.target.value});
@@ -46,8 +48,20 @@ class Forms extends React.Component {
         event.preventDefault();
     }
     formThreeSubmit (event) {
+        const renderMessage = () => {
+            document.getElementById("form").innerHTML = `${this.state.firstName} ${this.state.lastName} <br/> ${this.state.phoneNumber} | ${this.state.email} <br/> <input type="reset" value="Reset" onClick={this.reset}>`
+        }
+        const renderForm = () => {
+            document.getElementById("form")
+        }
         let submitted = true;
+        submitted ? renderMessage() : renderForm();
+        event.preventDefault();
     }
+    reset (event) {
+        
+    }
+    
     render () {
         let header;
         if (this.state.username && this.state.age) {
@@ -87,7 +101,7 @@ class Forms extends React.Component {
                 </form>
 
                 <form className="formThree" onSubmit={this.formThreeSubmit}>
-                    <div className="beforeSubmit">
+                    <div id="form">
                     <h1 className="welcome">Welcome!</h1>
                     <p>Please provide your information below.</p>
                     <input type="text" placeholder="First Name" onChange={(event) => {this.setState({firstName: event.target.value})}}></input><br/>
