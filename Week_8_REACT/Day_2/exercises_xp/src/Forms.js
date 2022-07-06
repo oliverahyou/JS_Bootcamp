@@ -49,7 +49,7 @@ class Forms extends React.Component {
     }
     formThreeSubmit (event) {
         const renderMessage = () => {
-            document.getElementById("form").innerHTML = `${this.state.firstName} ${this.state.lastName} <br/> ${this.state.phoneNumber} | ${this.state.email} <br/> <input type="reset" value="Reset" onClick={this.reset}>`
+            document.getElementById("form").innerHTML = `${this.state.firstName} ${this.state.lastName} <br/> ${this.state.phoneNumber} | ${this.state.email} <br/> <input type="reset" value="Reset" onClick=${this.reset}>`
         }
         const renderForm = () => {
             document.getElementById("form")
@@ -59,7 +59,7 @@ class Forms extends React.Component {
         event.preventDefault();
     }
     reset (event) {
-        
+        document.getElementById("form").reset();
     }
     
     render () {
