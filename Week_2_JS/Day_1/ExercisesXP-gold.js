@@ -15,17 +15,17 @@ let newArr = [mi + strd + " " + po + strx];
 console.log(newArr);
 
 // Exercise 3
-    let num1 = Number(prompt("Please enter a number"));
-    console.log(typeof (num1));
-    num1
-    let num2 = Number(prompt("Please enter a number again"));
-    let sum = num1 + num2;
-    alert("Sum is " + sum);
-    let diff = num1 - num2;
-    alert("Difference is " + diff);
-    let mult = num1 * num2;
-    alert("Product is " + mult);
-    let div = num1/num2;
-    alert("Quotient is " + div)
+let num1 = Number(prompt("Please enter a number"));
+console.log(typeof (num1));
+num1
+let num2 = Number(prompt("Please enter a number again"));
+let sum = num1 + num2;
+alert("Sum is " + sum);
+let diff = num1 - num2;
+alert("Difference is " + diff);
+let mult = num1 * num2;
+alert("Product is " + mult);
+let div = num1/num2;
+alert("Quotient is " + div)
 
     
