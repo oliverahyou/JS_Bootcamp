@@ -18,12 +18,12 @@ console.log(date);
 
 // EXERCISE 2
 let input = prompt("Please enter your zip code.");
-let zip = input.toString("");
-console.log(zip);
+let zipArr = input.split("");
+console.log(zipArr);
 console.log(zipArr.length);
 
-// if (zipArr.length === 5 &&  && input.includes(" ") === false) {
-//     console.log("Success");
-// } else {
-//     console.log("Error");
-// }
+if (zipArr.length === 5 && parseInt(input) && input.includes(" ") === false) {
+    console.log("Success");
+} else {
+    console.log("Error");
+}
