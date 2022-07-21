@@ -21,8 +21,9 @@ let input = prompt("Please enter your zip code.");
 let zipArr = input.split("");
 console.log(zipArr);
 console.log(zipArr.length);
+console.log(parseInt(input));
 
-if (zipArr.length === 5 && parseInt(input) && input.includes(" ") === false) {
+if (zipArr.length === 5 && zipArr.every((value) => { return (value >= 0)}) && input.includes(" ") === false) {
     console.log("Success");
 } else {
     console.log("Error");
