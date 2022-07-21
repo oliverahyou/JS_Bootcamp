@@ -17,4 +17,13 @@ let date = currentyear - halfage_gap;
 console.log(date);
 
 // EXERCISE 2
+let input = prompt("Please enter your zip code.");
+let zip = input.toString("");
+console.log(zip);
+console.log(zipArr.length);
 
+// if (zipArr.length === 5 &&  && input.includes(" ") === false) {
+//     console.log("Success");
+// } else {
+//     console.log("Error");
+// }
