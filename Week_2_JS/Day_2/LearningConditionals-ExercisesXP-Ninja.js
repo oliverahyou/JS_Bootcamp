@@ -35,11 +35,11 @@
 // } else {
 //     console.log("Error");
 // }
-a = 1
-e = 2
-i = 3
-o = 4
-u = 5
+// a = 1
+// e = 2
+// i = 3
+// o = 4
+// u = 5
 // EXERCISE 3
 let str = prompt("Please enter a word.");
 let resA = str.replace(/a/g, "1");
