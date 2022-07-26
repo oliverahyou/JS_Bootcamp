@@ -9,7 +9,7 @@ const abbrevName = () => {
         let res = str.replace(surname, ".");
         console.log(res);
     } else {
-        console.log("Ooops. Something went wrong.");
+        console.log("No match.");
     }
 }
 abbrevName(str);
