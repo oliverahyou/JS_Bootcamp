@@ -1,10 +1,6 @@
 const capitalize = (str) => {
-    let arr = [str.split("")];
-    for (let i of arr) {
-        if (i % 2 === 0) {
-            console.log(arr[i].toUpperCase());
-        } 
-    }
+    let strUpper = str.toUpperCase();
+    let arr = [strUpper];
     console.log(arr);
 };
 capitalize("abcdef");
